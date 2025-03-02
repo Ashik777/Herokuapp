@@ -107,3 +107,19 @@
 2025-03-02 13:23:54 INFO  LoginPageTestcase:31 - truehome page text
 2025-03-02 13:23:55 INFO  LoginPageTestcase:25 - Clicked on submit button
 2025-03-02 13:23:55 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 16:38:41 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/testng.xml
+
+2025-03-02 16:40:56 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/crossbroser.xml
+
+2025-03-02 16:41:33 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 16:41:33 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 16:41:34 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 16:41:36 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 16:41:36 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 16:42:16 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 16:42:16 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 16:42:17 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 16:42:20 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 16:42:20 INFO  LoginPageTestcase:31 - truehome page text
