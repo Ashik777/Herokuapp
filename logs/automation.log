@@ -1,0 +1,15 @@
+2025-03-02 11:57:45 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/testng.xml
+
+2025-03-02 11:58:20 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 11:58:21 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 11:58:21 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 11:58:23 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 12:00:05 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/testng.xml
+
+2025-03-02 12:00:17 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 12:00:18 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 12:00:18 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 12:00:20 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 12:00:20 INFO  LoginPageTestcase:31 - truehome page text
