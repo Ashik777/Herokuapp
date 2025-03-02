@@ -13,3 +13,97 @@
 2025-03-02 12:00:18 INFO  LoginPageTestcase:23 - entered password
 2025-03-02 12:00:20 INFO  LoginPageTestcase:25 - Clicked on submit button
 2025-03-02 12:00:20 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:06:59 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/crossbroser.xml
+
+2025-03-02 13:07:39 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/crossbroser.xml
+
+2025-03-02 13:08:13 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:08:14 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:08:14 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:08:16 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:08:16 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:08:34 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/crossbroser.xml
+
+2025-03-02 13:09:23 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:09:24 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:09:25 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:09:28 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:09:28 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:10:00 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/test-output/testng-failed.xml
+
+2025-03-02 13:10:12 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:10:12 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:10:13 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:10:15 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:10:15 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:17:44 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/crossbroser.xml
+
+2025-03-02 13:18:19 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:18:19 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:18:20 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:18:22 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:18:22 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:19:00 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:19:01 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:19:01 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:19:04 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:19:04 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:19:26 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/crossbroser.xml
+
+2025-03-02 13:19:38 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:19:39 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:19:39 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:19:41 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:19:41 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:19:54 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:19:54 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:19:55 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:19:58 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:19:58 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:20:55 INFO  Utils:112 - [XmlSuite] [WARN] 'parallel' value 'true' is no longer valid, defaulting to 'methods'.
+2025-03-02 13:20:55 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/paralleltesting.xml
+
+2025-03-02 13:21:07 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:21:08 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:21:08 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:21:10 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:21:10 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:21:22 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:21:23 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:21:23 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:21:26 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:21:27 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:22:13 INFO  Utils:112 - [XmlSuite] [WARN] 'parallel' value 'true' is no longer valid, defaulting to 'methods'.
+2025-03-02 13:22:13 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/paralleltesting.xml
+
+2025-03-02 13:22:26 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:22:26 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:22:27 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:22:28 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:22:29 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:22:40 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:22:41 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:22:42 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:22:45 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:22:45 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:23:37 INFO  Utils:112 - [TestNG] Running:
+  /Users/ashik/eclipse-workspace/Herokuapp/paralleltesting.xml
+
+2025-03-02 13:23:50 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:23:50 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-02 13:23:51 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:23:51 INFO  LoginPageTestcase:21 - entered user name
+2025-03-02 13:23:51 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:23:52 INFO  LoginPageTestcase:23 - entered password
+2025-03-02 13:23:53 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:23:54 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-02 13:23:55 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-02 13:23:55 INFO  LoginPageTestcase:31 - truehome page text

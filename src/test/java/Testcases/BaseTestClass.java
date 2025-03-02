@@ -11,21 +11,32 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 public class BaseTestClass {
 	WebDriver driver;
 	public Properties p;
 	public Logger logger;
 	@BeforeMethod
-	public void setup() throws IOException
+	@Parameters({"browser"})
+	public void setup(String br) throws IOException
 	{
 	FileInputStream file =new FileInputStream(".//src/test/resources/property");
 	p=new Properties();
 	p.load(file);
 	logger=LogManager.getLogger(this.getClass());
-	driver=new ChromeDriver();
+	if(br.equalsIgnoreCase("chrome"))
+	{
+		driver=new ChromeDriver();	
+	}
+	if(br.equalsIgnoreCase("edge"))
+	{
+		driver = new EdgeDriver();
+	}
+	
 	driver.get(p.getProperty("appurl"));
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
