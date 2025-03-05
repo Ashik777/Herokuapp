@@ -12,9 +12,9 @@ public class LoginPageObjectClass extends BasePage {
 	}
 
 
-@FindBy(xpath="//input[@id='username']") WebElement user_name;
-@FindBy(xpath="//input[@id='password']") WebElement password;
-@FindBy(xpath="//button[@type='submit']") WebElement submitButton;
+@FindBy(xpath="//input[@id='username']") private WebElement user_name;
+@FindBy(xpath="//input[@id='password']") private WebElement password;
+@FindBy(xpath="//button[@type='submit']") private WebElement submitButton;
 
 
 public void setUserName(String user)

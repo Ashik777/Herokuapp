@@ -10,8 +10,8 @@ public class HomePageObjectClass extends BasePage{
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-@FindBy(xpath="//h4[text()='Welcome to the Secure Area. When you are done click logout below.']") WebElement homepageText;
-@FindBy(xpath="//i[text()=' Logout']") WebElement logoutButton;
+@FindBy(xpath="//h4[text()='Welcome to the Secure Area. When you are done click logout below.']") private WebElement homepageText;
+@FindBy(xpath="//i[text()=' Logout']") private WebElement logoutButton;
 
 public boolean getHomepageText()
 {

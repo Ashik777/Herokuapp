@@ -29,7 +29,7 @@ public class LoginPageTestcase extends BaseTestClass {
 	if(homepagetext_Status==true)
 	{
 		logger.info(homepagetext_Status+"home page text");
-		AssertJUnit.assertTrue(true);
+		Assert.assertTrue(true);
 	}
 }
 }
