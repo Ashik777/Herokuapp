@@ -28,15 +28,15 @@ jobs:
           sudo apt-get install -y google-chrome-stable
           CHROME_VERSION=$(google-chrome --version | grep -oP '[0-9]+' | head -1)
           LATEST_DRIVER=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
-          curl -sS -O https://chromedriver.storage.googleapis.com/${LATEST_DRIVER}/chromedriver_linux64.zip
-          unzip chromedriver_linux64.zip
+          curl -sS -O https://chromedriver.storage.googleapis.com/${LATEST_DRIVER}/chromedriver-linux64.zip
+          unzip chromedriver-linux64.zip
           sudo mv chromedriver /usr/local/bin/
           chmod +x /usr/local/bin/chromedriver
           google-chrome --version
           chromedriver --version
 
       - name: Cache Maven Dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ~/.m2/repository
           key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
@@ -46,9 +46,10 @@ jobs:
       - name: Run Tests Using Maven
         run: mvn clean test
 
-      - name: Upload TestNG Report (if available)
-        uses: actions/upload-artifact@v3
+      - name: Upload TestNG Report
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: testng-reports
           path: test-output/
+          compression-level: 6  # (Optional) Adjust compression for better performance
