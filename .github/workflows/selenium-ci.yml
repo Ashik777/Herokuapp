@@ -22,34 +22,60 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install Google Chrome & ChromeDriver
+      - name: Install Google Chrome and ChromeDriver
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Verify Installations
         run: |
-          sudo apt-get update
-          
-          # Check if Chrome is already installed
-          if ! command -v google-chrome &> /dev/null; then
-            echo "Installing Google Chrome..."
-            sudo apt-get install -y google-chrome-stable || true
-          else
-            echo "Google Chrome is already installed."
-          fi
-          
-          # Get installed Chrome version
-          CHROME_VERSION=$(google-chrome --version | grep -oP '[0-9]+' | head -1)
-          
-          # Remove any existing ChromeDriver
-          sudo rm -f /usr/local/bin/chromedriver
-          
-          # Fetch the latest compatible ChromeDriver version
-          CHROMEDRIVER_VERSION=$(curl -sS "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
-          
-          # Download and install ChromeDriver
-          wget -q "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver-linux64.zip"
-          unzip chromedriver-linux64.zip
-          sudo mv chromedriver /usr/local/bin/
-          chmod +x /usr/local/bin/chromedriver
-          
-          # Verify installation
+          google-chrome --version
+          chromedriver --version
+
+      - name: Cache Maven Dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.m2/repository
+          key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            maven-${{ runner.os }}
+
+      - name: Run Tests Using Maven
+        run: mvn clean test
+
+      - name: Upload TestNG Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: testng-reports
+          path: test-output/
+name: Selenium Test Automation CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set Up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install Google Chrome and ChromeDriver
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Verify Installations
+        run: |
           google-chrome --version
           chromedriver --version
 
