@@ -30,8 +30,11 @@ jobs:
           # Get installed Chrome version
           CHROME_VERSION=$(google-chrome --version | grep -oP '[0-9]+' | head -1)
           
+          # Remove old ChromeDriver if exists
+          sudo rm -f /usr/local/bin/chromedriver
+          
           # Fetch the latest compatible ChromeDriver version
-          CHROMEDRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
+          CHROMEDRIVER_VERSION=$(curl -sS "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION")
           
           # Download and install ChromeDriver
           wget -q "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver-linux64.zip"
