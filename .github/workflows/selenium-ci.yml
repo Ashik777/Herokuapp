@@ -22,16 +22,24 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Install Chrome & ChromeDriver
+      - name: Install Google Chrome & ChromeDriver
         run: |
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
+          
+          # Get installed Chrome version
           CHROME_VERSION=$(google-chrome --version | grep -oP '[0-9]+' | head -1)
-          LATEST_DRIVER=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
-          curl -sS -O https://chromedriver.storage.googleapis.com/${LATEST_DRIVER}/chromedriver-linux64.zip
+          
+          # Fetch the latest compatible ChromeDriver version
+          CHROMEDRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
+          
+          # Download and install ChromeDriver
+          wget -q "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver-linux64.zip"
           unzip chromedriver-linux64.zip
           sudo mv chromedriver /usr/local/bin/
           chmod +x /usr/local/bin/chromedriver
+          
+          # Verify versions
           google-chrome --version
           chromedriver --version
 
@@ -52,4 +60,3 @@ jobs:
         with:
           name: testng-reports
           path: test-output/
-          compression-level: 6  # (Optional) Adjust compression for better performance
