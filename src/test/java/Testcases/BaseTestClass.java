@@ -16,6 +16,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTestClass {
 	WebDriver driver;
 	public Properties p;
@@ -24,16 +26,19 @@ public class BaseTestClass {
 	@Parameters({"browser"})
 	public void setup(String br) throws IOException
 	{
+		System.out.println("Received browser parameter: " + br);
 	FileInputStream file =new FileInputStream(".//src/test/resources/property");
 	p=new Properties();
 	p.load(file);
 	logger=LogManager.getLogger(this.getClass());
 	if(br.equalsIgnoreCase("chrome"))
 	{
+		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();	
 	}
 	if(br.equalsIgnoreCase("edge"))
 	{
+		WebDriverManager.chromedriver().setup();
 		driver = new EdgeDriver();
 	}
 	

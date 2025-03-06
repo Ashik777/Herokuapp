@@ -21,12 +21,12 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          cache: maven  # Improves build performance by caching dependencies
+          cache: maven
 
       - name: Install Google Chrome and ChromeDriver
         uses: browser-actions/setup-chrome@v1
         with:
-          chrome-version: stable  # Ensures the latest stable Chrome version
+          chrome-version: stable
 
       - name: Verify Installations
         run: |
@@ -40,3 +40,6 @@ jobs:
           key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             m
+
+      - name: Run Selenium Tests
+        run: mvn test -Dbrowser=chrome
