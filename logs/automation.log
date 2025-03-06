@@ -1,29 +1,8 @@
-2025-03-05 00:21:48 INFO  Utils:112 - [TestNG] Running:
+2025-03-06 14:21:36 INFO  Utils:112 - [TestNG] Running:
   /Users/ashik/eclipse-workspace/Herokuapp/testng.xml
 
-2025-03-05 00:22:06 INFO  Utils:112 - [TestNG] Running:
-  /Users/ashik/eclipse-workspace/Herokuapp/crossbroser.xml
-
-2025-03-05 00:22:19 INFO  LoginPageTestcase:18 - Launching the browser
-2025-03-05 00:22:20 INFO  LoginPageTestcase:21 - entered user name
-2025-03-05 00:22:20 INFO  LoginPageTestcase:23 - entered password
-2025-03-05 00:22:22 INFO  LoginPageTestcase:25 - Clicked on submit button
-2025-03-05 00:22:22 INFO  LoginPageTestcase:31 - truehome page text
-2025-03-05 00:23:07 INFO  LoginPageTestcase:18 - Launching the browser
-2025-03-05 00:23:08 INFO  LoginPageTestcase:21 - entered user name
-2025-03-05 00:23:09 INFO  LoginPageTestcase:23 - entered password
-2025-03-05 00:23:12 INFO  LoginPageTestcase:25 - Clicked on submit button
-2025-03-05 00:23:12 INFO  LoginPageTestcase:31 - truehome page text
-2025-03-05 11:29:08 INFO  Utils:112 - [TestNG] Running:
-  /Users/ashik/eclipse-workspace/Herokuapp/paralleltesting.xml
-
-2025-03-05 11:29:20 INFO  LoginPageTestcase:18 - Launching the browser
-2025-03-05 11:29:21 INFO  LoginPageTestcase:21 - entered user name
-2025-03-05 11:29:21 INFO  LoginPageTestcase:23 - entered password
-2025-03-05 11:29:23 INFO  LoginPageTestcase:25 - Clicked on submit button
-2025-03-05 11:29:23 INFO  LoginPageTestcase:31 - truehome page text
-2025-03-05 11:29:53 INFO  LoginPageTestcase:18 - Launching the browser
-2025-03-05 11:29:53 INFO  LoginPageTestcase:21 - entered user name
-2025-03-05 11:29:54 INFO  LoginPageTestcase:23 - entered password
-2025-03-05 11:29:57 INFO  LoginPageTestcase:25 - Clicked on submit button
-2025-03-05 11:29:57 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-06 14:21:47 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-06 14:21:48 INFO  LoginPageTestcase:21 - entered user name
+2025-03-06 14:21:48 INFO  LoginPageTestcase:23 - entered password
+2025-03-06 14:21:50 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-06 14:21:50 INFO  LoginPageTestcase:31 - truehome page text
