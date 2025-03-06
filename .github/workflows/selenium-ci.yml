@@ -34,16 +34,16 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.m2/repository
-          key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
-            maven-${{ runner.os }}
+            ${{ runner.os }}-maven-
 
       - name: Run Tests Using Maven
         run: mvn clean test
 
       - name: Upload TestNG Report
-        uses: actions/upload-artifact@v4
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: testng-reports
           path: test-output/
@@ -83,16 +83,16 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.m2/repository
-          key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
-            maven-${{ runner.os }}
+            ${{ runner.os }}-maven-
 
       - name: Run Tests Using Maven
         run: mvn clean test
 
       - name: Upload TestNG Report
-        uses: actions/upload-artifact@v4
         if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: testng-reports
           path: test-output/
