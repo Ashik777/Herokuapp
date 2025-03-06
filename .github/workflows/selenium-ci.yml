@@ -25,12 +25,19 @@ jobs:
       - name: Install Google Chrome & ChromeDriver
         run: |
           sudo apt-get update
-          sudo apt-get install -y google-chrome-stable
+          
+          # Check if Chrome is already installed
+          if ! command -v google-chrome &> /dev/null; then
+            echo "Installing Google Chrome..."
+            sudo apt-get install -y google-chrome-stable || true
+          else
+            echo "Google Chrome is already installed."
+          fi
           
           # Get installed Chrome version
           CHROME_VERSION=$(google-chrome --version | grep -oP '[0-9]+' | head -1)
           
-          # Remove old ChromeDriver if exists
+          # Remove any existing ChromeDriver
           sudo rm -f /usr/local/bin/chromedriver
           
           # Fetch the latest compatible ChromeDriver version
@@ -42,7 +49,7 @@ jobs:
           sudo mv chromedriver /usr/local/bin/
           chmod +x /usr/local/bin/chromedriver
           
-          # Verify versions
+          # Verify installation
           google-chrome --version
           chromedriver --version
 
