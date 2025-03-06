@@ -1,4 +1,4 @@
-name: Selenium CI/CD Pipeline
+name: Selenium Test Automation CI
 
 on:
   push:
@@ -9,39 +9,46 @@ on:
       - main
 
 jobs:
-  selenium-tests:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set Up JDK 17
+      - name: Set Up Java
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: '17'
-          cache: maven
 
-      - name: Install Chrome
+      - name: Install Chrome & ChromeDriver
         run: |
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
-
-      - name: Install ChromeDriver
-        run: |
-          CHROME_VERSION=$(google-chrome --version | awk '{print $3}' | cut -d '.' -f 1)
-          curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION | xargs -I {} curl -sS -O https://chromedriver.storage.googleapis.com/{}/chromedriver_linux64.zip
+          CHROME_VERSION=$(google-chrome --version | grep -oP '[0-9]+' | head -1)
+          LATEST_DRIVER=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
+          curl -sS -O https://chromedriver.storage.googleapis.com/${LATEST_DRIVER}/chromedriver_linux64.zip
           unzip chromedriver_linux64.zip
           sudo mv chromedriver /usr/local/bin/
           chmod +x /usr/local/bin/chromedriver
+          google-chrome --version
           chromedriver --version
 
-      - name: Run Tests with Maven
-        run: mvn test -Dbrowser=chrome
-
-      - name: Upload Test Reports (Extent Reports)
-        uses: actions/upload-artifact@v4
+      - name: Cache Maven Dependencies
+        uses: actions/cache@v3
         with:
-          name: Test-Reports
+          path: ~/.m2/repository
+          key: maven-${{ runner.os }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            maven-${{ runner.os }}
+
+      - name: Run Tests Using Maven
+        run: mvn clean test
+
+      - name: Upload TestNG Report (if available)
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: testng-reports
           path: test-output/
