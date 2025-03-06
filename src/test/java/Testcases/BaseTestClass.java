@@ -20,7 +20,7 @@ import org.openqa.selenium.edge.EdgeOptions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTestClass {
-    WebDriver driver;
+   public WebDriver driver;
     public Properties p;
     public Logger logger;
 
@@ -29,7 +29,7 @@ public class BaseTestClass {
     public void setup(String br) throws IOException {
         System.out.println("Received browser parameter: " + br);
 
-        FileInputStream file = new FileInputStream(".//src/test/resources/property");
+        FileInputStream file = new FileInputStream(".//src/test/resources/config.properties");
         p = new Properties();
         p.load(file);
         logger = LogManager.getLogger(this.getClass());

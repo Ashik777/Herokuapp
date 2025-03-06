@@ -6,3 +6,10 @@
 2025-03-06 14:21:48 INFO  LoginPageTestcase:23 - entered password
 2025-03-06 14:21:50 INFO  LoginPageTestcase:25 - Clicked on submit button
 2025-03-06 14:21:50 INFO  LoginPageTestcase:31 - truehome page text
+2025-03-06 23:02:06 INFO  WebDriverManager:1229 - Using chromedriver 133.0.6943.141 (resolved driver for Chrome 133)
+2025-03-06 23:02:06 INFO  WebDriverManager:1291 - Exporting webdriver.chrome.driver as /Users/ashik/.cache/selenium/chromedriver/mac-arm64/133.0.6943.141/chromedriver
+2025-03-06 23:02:10 INFO  LoginPageTestcase:18 - Launching the browser
+2025-03-06 23:02:10 INFO  LoginPageTestcase:21 - entered user name
+2025-03-06 23:02:10 INFO  LoginPageTestcase:23 - entered password
+2025-03-06 23:02:11 INFO  LoginPageTestcase:25 - Clicked on submit button
+2025-03-06 23:02:11 INFO  LoginPageTestcase:31 - truehome page text
